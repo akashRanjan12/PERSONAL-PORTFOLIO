@@ -60,6 +60,7 @@ function vis() {
   let bugRepCont = document.querySelector(".bug-rep-cont");
   let cut = document.querySelector(".cross");
   let bug = document.querySelector(".BugButton");
+  let sub = document.querySelector(".sub");
   if (bug && bugRepCont) {
     // bugRepCont.style.display = "flex";
     bug.addEventListener("click", function () {

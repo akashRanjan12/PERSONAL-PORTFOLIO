@@ -82,6 +82,10 @@ body {
   opacity: 0;
 }
 .data {
+  transform: translateY(50px);
+  opacity: 0;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out forwards;
   p {
     padding: 20px;
     font-size: 2rem;
@@ -90,10 +94,6 @@ body {
     cursor: default;
   }
 
-  transform: translateY(50px);
-  opacity: 0;
-  overflow: hidden;
-  animation: fadeIn 1s ease-in-out forwards;
   /* Apply the oval effect */
   #cir {
     position: relative;
@@ -149,10 +149,6 @@ body {
 }
 .ht:hover::after {
   opacity: 1;
-}
-.highlight-text {
-  text-decoration: underline;
-  text-decoration-style: dotted;
 }
 /* social media0 */
 .social-media-cont {
@@ -236,12 +232,6 @@ body {
     border-left: 2px solid #2196f3;
     border-right: 2px solid #2196f3;
   }
-
-  .Btn:hover .tooltip {
-    opacity: 1;
-    transition-duration: 0.3s;
-  }
-
   .Btn:hover {
     background-color: #01579b;
     transition-duration: 0.3s;
@@ -322,6 +312,7 @@ body {
 .skill-container {
   background-attachment: fixed;
   background-color: #d9e4e0;
+  /* background-color: rebeccapurple; */
   width: 100%;
   height: 82svh;
   display: flex;
@@ -340,7 +331,7 @@ body {
   .loaderBar4,
   .loaderBar5,
   .loaderBar6 {
-    width: calc(250px / 0.707);
+    width: calc(200px / 0.707);
     height: 10px;
     background: #f9f9f9;
     border-radius: 10px;
@@ -1031,7 +1022,7 @@ body {
       padding: 10px;
     }
     input {
-      width: 300px;
+      width: 280px;
       height: 10px;
       padding: 10px;
       font-size: 1.2rem;
@@ -1044,7 +1035,7 @@ body {
       font-size: 1.5rem;
     }
     textarea {
-      width: 300px;
+      width: 280px;
       padding: 10px;
       height: 80px;
       font-size: 1.2rem;
@@ -1157,29 +1148,80 @@ body {
 }
 /* bug report container */
 .bug-rep-cont {
-  /* visibility: hidden; */
   display: none;
-  width: 80%;
-  height: 600px;
-  background-color: #1b2631;
+  width: 100%;
+  height: 100%;
+  background-color: #00000078;
   position: fixed;
   bottom: 0%;
-  right: 10%;
   z-index: 1;
-  .show {
-    visibility: visible;
-  }
   .cross {
     font-size: 2rem;
     cursor: pointer;
     width: fit-content;
     color: whitesmoke;
+    background-color: #00000081;
+    border-radius: 8px;
+    height: fit-content;
     .fa-multiply {
       padding: 10px;
       width: fit-content;
     }
   }
+  .form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .frm {
+      background-color: #d9e4e0;
+      padding: 100px;
+      border-radius: 10px;
+    }
+    #lab {
+      color: orangered;
+      font-size: 1.5rem;
+    }
+    input {
+      width: 280px;
+      height: 10px;
+      padding: 10px;
+      font-size: 1.2rem;
+      box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+      border: none;
+      border-radius: 5px;
+    }
+    textarea {
+      width: 280px;
+      padding: 10px;
+      height: 80px;
+      font-size: 1.2rem;
+      box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      padding: 7px;
+      width: 70%;
+      margin-left: 50px;
+      font-size: 1.3rem;
+      border-radius: 8px;
+      border: none;
+      transition: all 0.4s ease;
+      box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    }
+    button:active {
+      transform: scale(1.1);
+      box-shadow: 0.2em 0.2em 0.3em #3f4e4f;
+    }
+    button:hover {
+      background-color: #000000;
+      color: whitesmoke;
+    }
+  }
 }
+
 /* media querries */
 @media (max-width: 720px) {
   .landing-page {
