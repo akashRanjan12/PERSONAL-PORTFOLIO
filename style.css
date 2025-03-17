@@ -2,28 +2,37 @@
   padding: 0;
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
 }
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+}
 /* header part */
 .header {
+  scroll-behavior: smooth;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: #1b2631;
   color: whitesmoke;
+  a {
+    color: whitesmoke;
+  }
   height: 6vh;
   span {
     font-size: 1.2rem;
     cursor: pointer;
     height: fit-content;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
+    transition: all 0.4s ease;
   }
   span:hover {
-    border: 1px solid #d9e4e0;
+    background-color: rgb(255, 166, 0);
   }
 }
 .design-box {
@@ -282,6 +291,7 @@ body {
   .left-cont {
     padding-bottom: 20px;
     text-align: center;
+    width: fit-content;
     /* width: max-content; */
     p {
       padding-right: 20px;
@@ -820,9 +830,6 @@ body {
           width: 280px;
         }
       }
-      .left-cont {
-        /* justify-content: center; */
-      }
     }
   }
 }
@@ -1071,7 +1078,9 @@ body {
 /* footer */
 .right-resv {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
   align-items: center;
   background-color: #1b2631;
   color: whitesmoke;
@@ -1085,66 +1094,8 @@ body {
 }
 /* bug  */
 .BugButton {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  background-color: transparent;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-.BugButton svg {
-  width: 44%;
-}
-.BugButton:hover {
-  background-color: #1b2631;
-  overflow: visible;
-}
-.bugsvg path {
-  transition: all 0.2s;
-}
-.BugButton:hover .bugsvg path {
-  stroke: #fff;
-}
-.BugButton:active {
-  transform: scale(0.98);
-}
-.tooltip {
-  --tooltip-color: rgb(41, 41, 41);
-  position: absolute;
-  top: -40px;
-  background-color: var(--tooltip-color);
-  color: white;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 8px 12px;
-  font-weight: 600;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.5s;
-  min-width: 100px;
-}
-.tooltip::before {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  content: "";
-  background-color: var(--tooltip-color);
-  bottom: -10%;
-}
-.BugButton:hover .tooltip {
-  opacity: 1;
+  padding: 10px;
 }
 /* bug report container */
 .bug-rep-cont {
@@ -1176,7 +1127,7 @@ body {
     align-items: center;
     .frm {
       background-color: #d9e4e0;
-      padding: 100px;
+      padding: 40px;
       border-radius: 10px;
     }
     #lab {
