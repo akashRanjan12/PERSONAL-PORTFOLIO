@@ -1292,6 +1292,15 @@ body {
       .cont-003,
       .cont-004 {
         .right-cont {
+          #image1:hover,
+          #image2:hover,
+          #image3:hover,
+          #image4:hover,
+          #image5:hover {
+            transform: none;
+          }
+        }
+        .right-cont {
           #image2 {
             display: none;
           }
