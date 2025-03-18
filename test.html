@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Button Inside Container</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Space before and after the button container */
+      .spacer {
+        height: 200vh; /* 200vh space */
+        background-color: #f4f4f4;
+      }
+
+      /* Main container where the button should stick */
+      .main-container {
+        height: 100vh; /* Container height */
+        position: relative;
+        background-color: #ddd;
+      }
+
+      /* Sticky container (sticks inside main container) */
+      .sticky-container {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .sticky-btn {
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease-in-out;
+      }
+
+      .sticky-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* This makes the button fixed inside the container while scrolling */
+      .sticky {
+        position: fixed !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Spacer (200vh) -->
+    <div class="spacer"></div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="main-container">
+      <div class="sticky-container" id="sticky-container">
+        <button class="sticky-btn">Click Me</button>
+      </div>
+    </div>
+
+    <!-- Bottom Spacer (200vh) -->
+    <div class="spacer"></div>
+
+    <script>
+      let mainContainer = document.getElementById("main-container");
+      let stickyContainer = document.getElementById("sticky-container");
+
+      window.addEventListener("scroll", function () {
+        let containerRect = mainContainer.getBoundingClientRect();
+
+        if (
+          containerRect.top <= 0 &&
+          containerRect.bottom >= window.innerHeight
+        ) {
+          // Stick the button while scrolling inside the container
+          stickyContainer.classList.add("sticky");
+        } else {
+          // Remove sticky effect when out of the container
+          stickyContainer.classList.remove("sticky");
+        }
+      });
+    </script>
+  </body>
+</html>

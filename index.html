@@ -37,7 +37,9 @@
           ><span>PROJECT<font style="font-family: cursive">s</font></span></a
         >
         <a href="index.html#cnt"
-          ><span>CONTACT<font style="font-family: cursive">s</font></span></a
+          ><span id="contvis"
+            >CONTACT<font style="font-family: cursive">s</font></span
+          ></a
         >
       </div>
       <div class="design-box"></div>
@@ -125,8 +127,9 @@
         </div>
         <a
           style="color: black"
-          href="rowmat/Akash kumar Ranjan 00.pdf"
-          download="rowmat/Akash kumar Ranjan 00.pdf"
+          href="rowmat/Akash kumar Ranjan 1.pdf"
+          download="rowmat/Akash kumar Ranjan 1.pdf"
+          target="_blank"
           ><div class="resume">
             <font
               style="font-size: 1.4rem; cursor: pointer; font-family: cursive"
@@ -295,7 +298,9 @@
                   Tech Stack: HTML, CSS, JavaScript (Static Website)
                 </p>
                 <div class="buttons-cont">
-                  <button class="demo">DEMO</button>
+                  <a href="https://phone-repairing.netlify.app/" target="_blank"
+                    ><button class="demo">DEMO</button></a
+                  >
                 </div>
               </div>
             </div>
@@ -316,7 +321,9 @@
                   Tech Stack: HTML, CSS, JavaScript (Static Website)
                 </p>
                 <div class="buttons-cont">
-                  <button class="demo">DEMO</button>
+                  <a href="https://organic-prod.netlify.app/" target="_blank">
+                    <button class="demo">DEMO</button></a
+                  >
                 </div>
               </div>
             </div>
@@ -359,7 +366,9 @@
                   Tech Stack: HTML, CSS, JavaScript (Static Website)
                 </p>
                 <div class="buttons-cont">
-                  <button class="demo">DEMO</button>
+                  <a href="https://all-unit-cnvrtr.netlify.app/" target="_blank"
+                    ><button class="demo">DEMO</button></a
+                  >
                 </div>
               </div>
             </div>
@@ -837,6 +846,16 @@
       </div>
     </footer>
     <script src="logic.js" async></script>
+    <script>
+      document.querySelectorAll(".git").forEach((button) => {
+        button.addEventListener("click", function () {
+          window.open(
+            "https://github.com/akashRanjan12?tab=repositories",
+            "_blank"
+          );
+        });
+      });
+    </script>
     <script>
       document.addEventListener("copy", function (event) {
         event.clipboardData.setData("text/plain", "⚠️ (Warning)");

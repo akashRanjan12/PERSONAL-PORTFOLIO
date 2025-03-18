@@ -546,6 +546,8 @@ a {
       right/200% 100%;
   }
 }
+/* hire me sticky btn  */
+
 /* project page */
 .heading-proj {
   width: 100%;
@@ -625,12 +627,14 @@ a {
         flex-wrap: wrap;
         width: 60%;
       }
+      p {
+        padding: 10px;
+        width: 95%;
+        text-align: center;
+      }
       .left-cont {
         width: 40%;
         font-size: 1.4rem;
-        p {
-          padding: 10px;
-        }
         font {
           color: orange;
           text-decoration: underline;
@@ -953,7 +957,8 @@ a {
   .box {
     cursor: grab;
     width: 320px;
-    height: 200px;
+    height: auto;
+    padding: 10px;
     background-color: #a5c8b6;
     display: flex;
     justify-content: center;
@@ -1289,5 +1294,8 @@ a {
       transform: none;
       opacity: 1;
     }
+  }
+  #contvis {
+    display: none;
   }
 }
